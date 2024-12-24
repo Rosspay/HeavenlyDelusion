@@ -5,13 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f3abedba-3c4c-4271-abb6-708775f2ac15" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.HeavenlyDelusion/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.HeavenlyDelusion/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Cainos/Pixel Art Top Down - Basic/Prefab/Player/PF Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Cainos/Pixel Art Top Down - Basic/Prefab/Player/PF Player.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level1.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MenuController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MenuController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerMovement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerMovement.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerMovement.inputactions" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerMovement.inputactions" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level2.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level2.unity" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -120,7 +114,7 @@
       <updated>1734954187832</updated>
       <workItem from="1734954195422" duration="1526000" />
       <workItem from="1734971654315" duration="8000" />
-      <workItem from="1734971664633" duration="16255000" />
+      <workItem from="1734971664633" duration="16576000" />
     </task>
     <servers />
   </component>
