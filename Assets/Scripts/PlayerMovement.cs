@@ -35,6 +35,15 @@ public partial class @PlayerMovement: IInputActionCollection2, IDisposable
                     ""processors"": ""NormalizeVector2"",
                     ""interactions"": ""Press"",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Grabbing"",
+                    ""type"": ""PassThrough"",
+                    ""id"": ""f5012ec4-9056-4eb1-ba1c-72ce78f4fa5b"",
+                    ""expectedControlType"": ""Vector2"",
+                    ""processors"": ""NormalizeVector2"",
+                    ""interactions"": ""Press"",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -103,6 +112,17 @@ public partial class @PlayerMovement: IInputActionCollection2, IDisposable
                     ""action"": ""Movement"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""7c92f4d1-57b4-4a3e-8e9e-f8a95683d1fe"",
+                    ""path"": ""<Keyboard>/e"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Grabbing"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -112,6 +132,7 @@ public partial class @PlayerMovement: IInputActionCollection2, IDisposable
         // Main
         m_Main = asset.FindActionMap("Main", throwIfNotFound: true);
         m_Main_Movement = m_Main.FindAction("Movement", throwIfNotFound: true);
+        m_Main_Grabbing = m_Main.FindAction("Grabbing", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -174,11 +195,13 @@ public partial class @PlayerMovement: IInputActionCollection2, IDisposable
     private readonly InputActionMap m_Main;
     private List<IMainActions> m_MainActionsCallbackInterfaces = new List<IMainActions>();
     private readonly InputAction m_Main_Movement;
+    private readonly InputAction m_Main_Grabbing;
     public struct MainActions
     {
         private @PlayerMovement m_Wrapper;
         public MainActions(@PlayerMovement wrapper) { m_Wrapper = wrapper; }
         public InputAction @Movement => m_Wrapper.m_Main_Movement;
+        public InputAction @Grabbing => m_Wrapper.m_Main_Grabbing;
         public InputActionMap Get() { return m_Wrapper.m_Main; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -191,6 +214,9 @@ public partial class @PlayerMovement: IInputActionCollection2, IDisposable
             @Movement.started += instance.OnMovement;
             @Movement.performed += instance.OnMovement;
             @Movement.canceled += instance.OnMovement;
+            @Grabbing.started += instance.OnGrabbing;
+            @Grabbing.performed += instance.OnGrabbing;
+            @Grabbing.canceled += instance.OnGrabbing;
         }
 
         private void UnregisterCallbacks(IMainActions instance)
@@ -198,6 +224,9 @@ public partial class @PlayerMovement: IInputActionCollection2, IDisposable
             @Movement.started -= instance.OnMovement;
             @Movement.performed -= instance.OnMovement;
             @Movement.canceled -= instance.OnMovement;
+            @Grabbing.started -= instance.OnGrabbing;
+            @Grabbing.performed -= instance.OnGrabbing;
+            @Grabbing.canceled -= instance.OnGrabbing;
         }
 
         public void RemoveCallbacks(IMainActions instance)
@@ -218,5 +247,6 @@ public partial class @PlayerMovement: IInputActionCollection2, IDisposable
     public interface IMainActions
     {
         void OnMovement(InputAction.CallbackContext context);
+        void OnGrabbing(InputAction.CallbackContext context);
     }
 }

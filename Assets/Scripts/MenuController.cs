@@ -23,4 +23,14 @@ public class MenuController : MonoBehaviour
         UnityEditor.EditorApplication.isPlaying = false;
 #endif
     }
+
+    public void onRestartGameButtonClicked()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex );
+    }
+
+    public void onMenuButtonClicked()
+    {
+        SceneManager.LoadScene("MainMenu");
+    }
 }
