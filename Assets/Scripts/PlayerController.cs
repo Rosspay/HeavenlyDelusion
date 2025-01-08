@@ -15,6 +15,12 @@ public class PlayerController : MonoBehaviour
     private Tilemap interactebleItemsTilemap;
     [SerializeField]
     private SpriteRenderer grabbedTileImage;
+    [SerializeField]
+    private AudioSource grabSound;
+    [SerializeField]
+    private AudioSource moveSound;
+    [SerializeField]
+    private AudioSource failSound;
 
     [SerializeField] 
     private GameObject RestartMenu;
@@ -60,6 +66,7 @@ public class PlayerController : MonoBehaviour
             grabbedTile = groundTilemap.GetTile(gridPosition) as Tile;
             groundTilemap.SetTile(gridPosition, null);
             grabbedTileImage.sprite = grabbedTile.sprite;
+            grabSound.Play();
         }
         else if (CanRelease(prevDirection))
         {
@@ -67,6 +74,7 @@ public class PlayerController : MonoBehaviour
             Vector3Int gridPosition = groundTilemap.WorldToCell(transform.position + (Vector3)prevDirection);
             groundTilemap.SetTile(gridPosition, grabbedTile);
             grabbedTileImage.sprite = null;
+            grabSound.Play();
         }
     }
     private void Move(Vector2 direction)
@@ -95,17 +103,19 @@ public class PlayerController : MonoBehaviour
         
         direction.Normalize();
         animator.SetBool("isMoving", direction.magnitude > 0);
+        moveSound.Play();
         prevDirection = direction;
         Vector3Int gridPosition = groundTilemap.WorldToCell(transform.position);
         if (!groundTilemap.HasTile(gridPosition))
         {
             RestartMenu.SetActive(true);
+            failSound.Play();
         }
 
         if (interactebleItemsTilemap.HasTile(gridPosition))
         {
-            PlayerPrefs.SetInt("Save", 2);
-            SceneManager.LoadScene("Level" + 2.ToString());
+            PlayerPrefs.SetInt("Save", SceneManager.GetActiveScene().buildIndex + 1);
+            SceneManager.LoadScene("Level" + PlayerPrefs.GetInt("Save").ToString());
         }
     }
 
