@@ -8,17 +8,24 @@ public class MenuController : MonoBehaviour
 {
     public void Start()
     {
-        PlayerPrefs.SetInt("Save", SceneManager.GetActiveScene().buildIndex + 1);
+        Effects.FadeScreen(Color.black, 1, 0, 1);
     }
 
     public void onNewGameButtonClicked()
     {
-        SceneManager.LoadScene("Level1");
+        Effects.FadeScreen(Color.black, 0, 1, 1, () => SceneManager.LoadScene("Level1"));
     }
 
     public void onLoadGameButtonClicked()
     {
-        SceneManager.LoadScene("Level" + PlayerPrefs.GetInt("Save").ToString());
+        if (PlayerPrefs.HasKey("Save"))
+        {
+            Effects.FadeScreen(Color.black, 0, 1, 1, () => SceneManager.LoadScene("Level" + PlayerPrefs.GetInt("Save").ToString()));
+        }
+        else
+        {
+            Effects.FadeScreen(Color.black, 0, 1, 1, () => SceneManager.LoadScene("Level1"));
+        }
     }
     public void onExitGameButtonClicked()
     {
@@ -32,7 +39,8 @@ public class MenuController : MonoBehaviour
 
     public void onRestartGameButtonClicked()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex );
+        Effects.FadeScreen(Color.black, 0, 1, 1, () => SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex ));
+        
     }
 
     public void onMenuButtonClicked()

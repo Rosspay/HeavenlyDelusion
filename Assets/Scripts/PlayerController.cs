@@ -115,7 +115,7 @@ public class PlayerController : MonoBehaviour
         if (interactebleItemsTilemap.HasTile(gridPosition))
         {
             PlayerPrefs.SetInt("Save", SceneManager.GetActiveScene().buildIndex + 1);
-            SceneManager.LoadScene("Level" + PlayerPrefs.GetInt("Save").ToString());
+            Effects.FadeScreen(Color.black, 0, 1, 1, () => SceneManager.LoadScene("Level" + PlayerPrefs.GetInt("Save").ToString()));;
         }
     }
 

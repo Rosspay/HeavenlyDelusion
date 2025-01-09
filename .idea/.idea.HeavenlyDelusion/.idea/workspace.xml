@@ -7,14 +7,11 @@
     <list default="true" id="f3abedba-3c4c-4271-abb6-708775f2ac15" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.HeavenlyDelusion/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.HeavenlyDelusion/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Cainos/Pixel Art Top Down - Basic/Prefab/Player/PF Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Cainos/Pixel Art Top Down - Basic/Prefab/Player/PF Player.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Cainos/Pixel Art Top Down - Basic/Prefab/Props/New Palette.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Cainos/Pixel Art Top Down - Basic/Prefab/Props/New Palette.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level1.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level2.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level2.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainMenu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainMenu.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level3.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level3.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level5.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level5.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/MenuController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MenuController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -121,6 +118,7 @@
       <workItem from="1734971664633" duration="17776000" />
       <workItem from="1736331072888" duration="429000" />
       <workItem from="1736348408987" duration="2674000" />
+      <workItem from="1736416294715" duration="1474000" />
     </task>
     <servers />
   </component>
@@ -145,10 +143,10 @@
           <line>14</line>
           <properties documentPath="D:\HeavenlyDelusion\Assets\Scripts\MenuController.cs" containingFunctionPresentation="Method 'onNewGameButtonClicked'">
             <startOffsets>
-              <option value="339" />
+              <option value="307" />
             </startOffsets>
             <endOffsets>
-              <option value="340" />
+              <option value="308" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="2" />
@@ -158,23 +156,23 @@
           <line>19</line>
           <properties documentPath="D:\HeavenlyDelusion\Assets\Scripts\MenuController.cs" containingFunctionPresentation="Method 'onLoadGameButtonClicked'">
             <startOffsets>
-              <option value="436" />
+              <option value="452" />
             </startOffsets>
             <endOffsets>
-              <option value="437" />
+              <option value="453" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="3" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Assets/Scripts/MenuController.cs</url>
-          <line>23</line>
+          <line>30</line>
           <properties documentPath="D:\HeavenlyDelusion\Assets\Scripts\MenuController.cs" containingFunctionPresentation="Method 'onExitGameButtonClicked'">
             <startOffsets>
-              <option value="571" />
+              <option value="826" />
             </startOffsets>
             <endOffsets>
-              <option value="572" />
+              <option value="827" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="4" />
