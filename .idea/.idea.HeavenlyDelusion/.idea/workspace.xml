@@ -8,9 +8,7 @@
       <change beforePath="$PROJECT_DIR$/.idea/.idea.HeavenlyDelusion/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.HeavenlyDelusion/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Cainos/Pixel Art Top Down - Basic/Prefab/Player/PF Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Cainos/Pixel Art Top Down - Basic/Prefab/Player/PF Player.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level1.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level3.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level3.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level5.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level5.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MenuController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MenuController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -25,7 +23,8 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Assets/Cainos/Pixel Art Top Down - Basic/Script/SoundManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/EventEditor.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameEventListener.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.collab-proxy@2.6.0/Editor/ViewSwitcher.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@1.7.0/InputSystem/Actions/InputActionState.cs" root0="SKIP_HIGHLIGHTING" />
@@ -57,7 +56,7 @@
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;editor.preferences.smartKeys_rider&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
@@ -118,7 +117,9 @@
       <workItem from="1734971664633" duration="17776000" />
       <workItem from="1736331072888" duration="429000" />
       <workItem from="1736348408987" duration="2674000" />
-      <workItem from="1736416294715" duration="1474000" />
+      <workItem from="1736416294715" duration="11180000" />
+      <workItem from="1739862210617" duration="494000" />
+      <workItem from="1743830322214" duration="4787000" />
     </task>
     <servers />
   </component>
@@ -182,10 +183,10 @@
           <line>60</line>
           <properties documentPath="D:\HeavenlyDelusion\Assets\Scripts\PlayerController.cs" containingFunctionPresentation="Method 'Grab'">
             <startOffsets>
-              <option value="1391" />
+              <option value="1388" />
             </startOffsets>
             <endOffsets>
-              <option value="1392" />
+              <option value="1389" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="6" />
@@ -195,10 +196,10 @@
           <line>80</line>
           <properties documentPath="D:\HeavenlyDelusion\Assets\Scripts\PlayerController.cs" containingFunctionPresentation="Method 'Move'">
             <startOffsets>
-              <option value="2195" />
+              <option value="2200" />
             </startOffsets>
             <endOffsets>
-              <option value="2196" />
+              <option value="2201" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="9" />

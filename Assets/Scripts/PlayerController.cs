@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.SceneManagement;
 using UnityEngine.Tilemaps;
 using UnityEngine.UIElements;
@@ -15,12 +16,11 @@ public class PlayerController : MonoBehaviour
     private Tilemap interactebleItemsTilemap;
     [SerializeField]
     private SpriteRenderer grabbedTileImage;
-    [SerializeField]
-    private AudioSource grabSound;
-    [SerializeField]
-    private AudioSource moveSound;
-    [SerializeField]
-    private AudioSource failSound;
+    public UnityEvent MoveEvent;
+    public UnityEvent BumpEvent;
+    public UnityEvent PickupEvent;
+    public UnityEvent FailEvent;
+    
 
     [SerializeField] 
     private GameObject RestartMenu;
@@ -66,7 +66,7 @@ public class PlayerController : MonoBehaviour
             grabbedTile = groundTilemap.GetTile(gridPosition) as Tile;
             groundTilemap.SetTile(gridPosition, null);
             grabbedTileImage.sprite = grabbedTile.sprite;
-            grabSound.Play();
+            PickupEvent.Invoke();
         }
         else if (CanRelease(prevDirection))
         {
@@ -74,14 +74,19 @@ public class PlayerController : MonoBehaviour
             Vector3Int gridPosition = groundTilemap.WorldToCell(transform.position + (Vector3)prevDirection);
             groundTilemap.SetTile(gridPosition, grabbedTile);
             grabbedTileImage.sprite = null;
-            grabSound.Play();
+            PickupEvent.Invoke();
         }
     }
     private void Move(Vector2 direction)
     {
         if (CanMove(direction))
         {
+            MoveEvent.Invoke();
             transform.position += (Vector3)direction;
+        }
+        else
+        {
+            BumpEvent.Invoke();
         }
 
         if (direction.x == -1 && direction.y == 0)
@@ -103,13 +108,12 @@ public class PlayerController : MonoBehaviour
         
         direction.Normalize();
         animator.SetBool("isMoving", direction.magnitude > 0);
-        moveSound.Play();
+        
         prevDirection = direction;
         Vector3Int gridPosition = groundTilemap.WorldToCell(transform.position);
         if (!groundTilemap.HasTile(gridPosition))
         {
-            RestartMenu.SetActive(true);
-            failSound.Play();
+            FailEvent.Invoke();
         }
 
         if (interactebleItemsTilemap.HasTile(gridPosition))
